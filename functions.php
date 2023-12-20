@@ -140,6 +140,8 @@ add_action( 'widgets_init', 'dogshop_widgets_init' );
 function dogshop_scripts() {
 	wp_enqueue_style( 'dogshop-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_style( 'dogshop-main', get_template_directory_uri() . '/css/main.css' );
+	wp_enqueue_style( 'bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css' );
+
 	wp_style_add_data( 'dogshop-style', 'rtl', 'replace' );
 
 	wp_enqueue_script( 'dogshop-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
