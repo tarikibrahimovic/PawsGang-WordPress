@@ -273,3 +273,9 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
  }
 
  add_action( 'widgets_init', 'custom_footer_widget_three' );
+
+ /**
+ * WooCommerce
+ */
+
+ add_theme_support('woocommerce');
