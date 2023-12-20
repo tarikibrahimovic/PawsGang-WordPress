@@ -35,11 +35,11 @@
 					<ul class="annoucement-bar__list">
 						<li>
 							<i class="bi bi-telephone rounded-circle"></i>
-							<a href="tel: +381 63 751 9339">+381 63 751 9339</a>
+							<a href="tel: +381 63 751 9339" class="text-decoration-none">+381 63 751 9339</a>
 						</li>
 						<li>
 							<i class="bi bi-envelope rounded-circle"></i>
-							<a href="mailto: hello@pawsgang.shop">tarikibrahimovic2016@gmail.com</a>
+							<a href="mailto: hello@pawsgang.shop" class="text-decoration-none">tarikibrahimovic2016@gmail.com</a>
 						</li>
 					</ul>
 				</div>
@@ -86,15 +86,32 @@
 		</div>
 
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'dogshop' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+		<nav id="site-navigation" class="main-navigation bg-primary">
+			<div class="container d-flex justify-content-center">
+				<div class="row">
+					<div class="col-12 d-flex justify-content-center">
+						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+							<i class="bi bi-list"></i>	
+						<?php esc_html_e( 'Primary Menu', 'dogshop' ); ?></button>
+					</div>
+
+					<div class="col-12 text-center">
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+							)
+						);
+						?>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		
+
+
+
+
 	</header><!-- #masthead -->

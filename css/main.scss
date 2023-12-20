@@ -16,6 +16,17 @@ $custom-colors: (
 // Merge maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
 
+$utilities: (
+    "rounded": (
+        property: border-radius,
+        class : rounded,
+        values: (
+            null: 1rem,
+            circle: 50%
+        )
+    )
+);
+
 @import "./bootstrap/scss/bootstrap"; // Bootstrap
 
 
@@ -63,3 +74,39 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
         border-radius: 20px!important;  
     }
 }
+
+
+// Main Menu
+.main-navigation {
+    font-weight: 600;
+
+    .current-menu-item > a {
+        background-color: rgb(149, 33, 149);
+    }
+
+    a {
+        color: var(--bs-white);
+        padding: 1rem 1.4rem;
+    }
+
+    a:hover {
+        background-color: rgb(149, 33, 149);
+    }
+
+    .menu-toggle {
+        background-color: $primary;
+        border: none;
+        color: $white;
+    }
+}
+
+// Front Page
+
+// Slider
+
+.carousel {
+    .carousel-control-prev, .carousel-control-next {
+        width: 9%;
+    }
+}
+

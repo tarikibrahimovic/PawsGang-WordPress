@@ -16,22 +16,31 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-        <h1>Home Page</h1>
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', 'page' );
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-	</main><!-- #main -->
+        <section class="container pb-5 pt-4">
+			<div id="carouselExampleDark" class="carousel carousel-dark slide overflow-hidden rounded">
+				<div class="carousel-indicators">
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+					<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+				</div>
+				<div class="carousel-inner">
+					<div class="carousel-item active" data-bs-interval="10000">
+						<a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/slider/slider-image1.png" alt=""></a>
+					</div>
+					<div class="carousel-item" data-bs-interval="2000">
+					<a href=""><img src="<?php echo get_template_directory_uri(); ?>/img/slider/slider-image2.png" alt=""></a>
+					</div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+				</button>
+			</div>
+		</section>
+	</main>
 
 <?php
-get_footer();
+// get_footer();
