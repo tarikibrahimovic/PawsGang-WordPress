@@ -48,7 +48,7 @@ get_header();
 			</p>
 			<div class="pt-5 pb-5">
 
-				<?php echo do_shortcode('[products columns=4 limit=4]'); ?>
+				<?php echo do_shortcode('[products popularity columns=4 limit=4]'); ?>
 			</div>
 		</section>
 
@@ -112,22 +112,17 @@ get_header();
 		</section>
 
 
-		<section class="container pt-5" style="padding-top: 400px;"></section>
+		<section class="container pt-5">
+			<h1 class="text-center pt-5">Special offers</h1>
+			<p class="text-center">
+				We offer a number of high queality toys to help keep your pets healthy and spoiled!
+			</p>
+			<div class="pt-5 pb-5">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+				<?php echo do_shortcode('[sale_products columns=4 limit=4]'); ?>
+			</div>
+		</section>
 	</main>
 
 <?php
-// get_footer();
+get_footer();
