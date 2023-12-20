@@ -1,3 +1,65 @@
+//Include custom variables default overrides here
 
+$primary: rgb(127, 24, 127);
+$gray: #E6E6E6;
+
+$theme-colors: (
+    "primary": $primary,
+    "gray": $gray
+);
+
+// Create your own map
+$custom-colors: (
+    "icon-background": rgba(127, 24, 127, 0.2),
+);
+
+// Merge maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "./bootstrap/scss/bootstrap"; // Bootstrap
+
+
+// HEADER
+.annoucement-bar {
+    font-size: 0.8rem;
+    border-bottom: 1px solid var(--bs-gray);
+
+    &__list {
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+        margin: 0 -10px;
+
+
+        li {
+            margin: 0 10px;
+            display: flex;
+            align-items: center;
+
+            .bi {
+                background-color: var(--bs-icon-background);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                margin-right: 6px;
+            }
+
+        }
+    }
+
+    @include media-breakpoint-down(lg){
+        display: none;
+    }
+    
+}
+
+.site-header {
+    .aws-search-field {
+        font-size: 0.9rem;
+        padding-left: 1.4rem;
+        border-radius: 20px!important;  
+    }
+}
