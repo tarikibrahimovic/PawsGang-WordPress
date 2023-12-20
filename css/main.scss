@@ -1,11 +1,15 @@
 //Include custom variables default overrides here
 
 $primary: rgb(127, 24, 127);
+$primary-opacity-8: rgba(127, 24, 127, 0.6);
 $gray: #E6E6E6;
+$sale: rgba(167, 4, 4, 0.8);
 
 $theme-colors: (
     "primary": $primary,
-    "gray": $gray
+    "primary-opacity-8": $primary-opacity-8,
+    "gray": $gray,
+    "sale": $sale,
 );
 
 // Create your own map
@@ -110,3 +114,23 @@ $utilities: (
     }
 }
 
+// Categories
+
+.categories {
+    background-color: #f9f9f9;
+
+    .categories__col {
+        height: 212px;
+
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @include media-breakpoint-up(md){
+        .categories__col {
+            height: 336px;
+        }
+    }
+}
