@@ -16,14 +16,14 @@
 			<div class="container">
 
 				<div class="row">
-					<div class="col-2">
-						About
+					<div class="col-sm-6 col-md-2 ">
+						<?php dynamic_sidebar('footer-widget-col-one'); ?>
 					</div>
-					<div class="col-2">
-						Company
+					<div class="col-sm-6 col-md-2">
+					<?php dynamic_sidebar('footer-widget-col-two'); ?>
 					</div>
-					<div class="col-md-4 ms-auto ">
-						Key in touch
+					<div class="col-md-4 ms-auto col-sm-12">
+					<?php dynamic_sidebar('footer-widget-col-three'); ?>
 					</div>
 				</div>
 			</div>
