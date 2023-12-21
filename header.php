@@ -53,7 +53,7 @@
 								<i class="bi bi-clock-history rounded-circle"></i>30 DAYS MONEYBACK GUARANTEE
 							</li>
 							<li>
-								<i class="bi bi-person rounded-circle"></i>24/7 Customer Service
+								<i class="bi bi-person rounded-circle"></i><?php echo do_shortcode('[donate account="your-paypal-email-address" for="Donation Purpose" onHover="Donate Now"]'); ?>
 							</li>
 						</ul>
 				</div>
